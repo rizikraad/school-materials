@@ -20,8 +20,8 @@ const subjectIcons = {
   "computer-fundamentals": "fundamentals"
 };
 
-const unavailableFile = "Ø§Ù„Ù…Ù„Ù ØºÙŠØ± Ù…ØªØ§Ø­ Ø­Ø§Ù„ÙŠØ§Ù‹";
-const unavailableGrades = "Ø§Ù„Ø¯Ø±Ø¬Ø§Øª ØºÙŠØ± Ù…ØªØ§Ø­Ø© Ø­Ø§Ù„ÙŠØ§Ù‹";
+const unavailableFile = "الملف غير متاح حالياً";
+const unavailableGrades = "الدرجات غير متاحة حالياً";
 const siteRoot = new URL("../", import.meta.url);
 const subjectList = document.querySelector("#subject-list");
 const subjectDetail = document.querySelector("#subject-detail");
@@ -116,11 +116,11 @@ async function showPdf(holder, status, path, subjectId, folder, title, downloadL
   if (!url || !await servedAsPdf(url) || !holder.isConnected) return;
 
   const actions = element("span", "pdf-actions");
-  const view = actionLink("Ø¹Ø±Ø¶ PDF", url.href, "book");
+  const view = actionLink("عرض PDF", url.href, "book");
   view.classList.add("view-link");
   view.target = "_blank";
   view.rel = "noopener";
-  view.setAttribute("aria-label", `Ø¹Ø±Ø¶ PDF â€” ${title}`);
+  view.setAttribute("aria-label", `عرض PDF — ${title}`);
 
   const download = actionLink(downloadLabel, url.href, "download");
   download.setAttribute("download", "");
@@ -129,7 +129,7 @@ async function showPdf(holder, status, path, subjectId, folder, title, downloadL
 }
 
 function chapterSection(subject) {
-  const section = disclosure("Ù…Ø­Ø§Ø¶Ø±Ø§Øª", "course-section", "book");
+  const section = disclosure("محاضرات", "course-section", "book");
   const content = element("div", "disclosure-content");
   section.append(content);
   for (const chapter of byNumber(subject.chapters)) {
@@ -140,7 +140,7 @@ function chapterSection(subject) {
       if (!chapterDetails.open || chapterDetails.children.length > 1) return;
       const lectures = byNumber(chapter.lectures);
       if (lectures.length === 0) {
-        chapterDetails.append(element("p", "empty-message", "Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ø­Ø§Ø¶Ø±Ø§Øª Ù…Ø¶Ø§ÙØ© Ø­Ø§Ù„ÙŠØ§Ù‹"));
+        chapterDetails.append(element("p", "empty-message", "لا توجد محاضرات مضافة حالياً"));
         return;
       }
 
@@ -153,7 +153,7 @@ function chapterSection(subject) {
         const status = element("span", "resource-status", unavailableFile);
         row.append(title, status);
         list.append(row);
-        void showPdf(row, status, lecture.pdf, subject.id, folder, lecture.title, "ØªØ­Ù…ÙŠÙ„ PDF");
+        void showPdf(row, status, lecture.pdf, subject.id, folder, lecture.title, "تحميل PDF");
       }
     });
 
@@ -161,18 +161,18 @@ function chapterSection(subject) {
   }
 
   if (subject.chapters.length === 0) {
-    content.append(element("p", "empty-message", "Ù„Ø§ ØªÙˆØ¬Ø¯ ÙØµÙˆÙ„ Ù…Ø¶Ø§ÙØ© Ø­Ø§Ù„ÙŠØ§Ù‹"));
+    content.append(element("p", "empty-message", "لا توجد فصول مضافة حالياً"));
   }
   return section;
 }
 
 function questionsSection(subject) {
-  const section = disclosure("Ø£Ø³Ø¦Ù„Ø©", "exam-option", "file");
+  const section = disclosure("أسئلة", "exam-option", "file");
   const list = element("ul", "disclosure-content resource-grid");
   section.append(list);
   const files = [
-    { title: "Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ù‡Ø± Ø§Ù„Ø£ÙˆÙ„", label: "ØªØ­Ù…ÙŠÙ„ Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ù‡Ø± Ø§Ù„Ø£ÙˆÙ„", path: subject.exam?.questions },
-    { title: "Ø§Ù„Ø£Ø¬ÙˆØ¨Ø© Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ÙŠØ©", label: "ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø£Ø¬ÙˆØ¨Ø© Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ÙŠØ©", path: subject.exam?.answers }
+    { title: "أسئلة الشهر الأول", label: "تحميل أسئلة الشهر الأول", path: subject.exam?.questions },
+    { title: "الأجوبة النموذجية", label: "تحميل الأجوبة النموذجية", path: subject.exam?.answers }
   ];
   for (const file of files) {
     const item = element("li", "resource-item");
@@ -195,12 +195,12 @@ function privatePortalUrl(value) {
 }
 
 function gradesSection(subject) {
-  const section = disclosure("Ø¯Ø±Ø¬Ø§Øª", "exam-option", "lock");
+  const section = disclosure("درجات", "exam-option", "lock");
   const list = element("ul", "disclosure-content resource-grid");
   section.append(list);
   const periods = [
-    { title: "Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ø´Ù‡Ø± Ø§Ù„Ø£ÙˆÙ„", url: subject.grades?.monthOne },
-    { title: "Ø¯Ø±Ø¬Ø§Øª Ø§Ù„ÙØµÙ„ Ø§Ù„Ø£ÙˆÙ„", url: subject.grades?.chapterOne }
+    { title: "درجات الشهر الأول", url: subject.grades?.monthOne },
+    { title: "درجات الفصل الأول", url: subject.grades?.chapterOne }
   ];
   for (const period of periods) {
     const item = element("li", "resource-item");
@@ -221,7 +221,7 @@ function gradesSection(subject) {
 }
 
 function examSection(subject) {
-  const section = disclosure("Ø§Ù„ØªÙ‚ÙŠÙŠÙ…", "course-section", "exam");
+  const section = disclosure("التقييم", "course-section", "exam");
   const content = element("div", "disclosure-content");
   content.append(questionsSection(subject), gradesSection(subject));
   section.append(content);
@@ -232,7 +232,7 @@ function chooseSubject(subject, card) {
   const wasOpen = selectedCard === card;
   if (selectedCard) {
     selectedCard.setAttribute("aria-expanded", "false");
-    selectedCard.querySelector(".action-text").textContent = "Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø§Ø¯Ø©";
+    selectedCard.querySelector(".action-text").textContent = "عرض المادة";
   }
 
   if (wasOpen) {
@@ -244,7 +244,7 @@ function chooseSubject(subject, card) {
 
   selectedCard = card;
   card.setAttribute("aria-expanded", "true");
-  card.querySelector(".action-text").textContent = "Ø¥Ø®ÙØ§Ø¡ Ø§Ù„Ù…Ø§Ø¯Ø©";
+  card.querySelector(".action-text").textContent = "إخفاء المادة";
 
   const banner = element("div", "course-heading");
   const title = element("h2", "", subject.title);
@@ -252,8 +252,8 @@ function chooseSubject(subject, card) {
   title.tabIndex = -1;
   const close = element("button", "close-course");
   close.type = "button";
-  close.setAttribute("aria-label", "Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù…Ø§Ø¯Ø©");
-  close.title = "Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù…Ø§Ø¯Ø©";
+  close.setAttribute("aria-label", "إغلاق المادة");
+  close.title = "إغلاق المادة";
   close.append(icon("close", 22));
   close.addEventListener("click", () => {
     chooseSubject(subject, card);
@@ -278,7 +278,7 @@ function subjectCard(subject) {
   const action = element("span", "subject-action");
   const mark = element("span", "disclosure-mark");
   mark.append(icon("plus", 16));
-  action.append(element("span", "action-text", "Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø§Ø¯Ø©"), mark);
+  action.append(element("span", "action-text", "عرض المادة"), mark);
   action.setAttribute("aria-hidden", "true");
 
   card.append(subjectIcon(subject.id, 29), element("span", "subject-title", subject.title), action);
@@ -293,6 +293,6 @@ try {
   subjectList.replaceChildren(...subjects.map(subjectCard));
   loadMessage.hidden = true;
 } catch (error) {
-  loadMessage.textContent = "ØªØ¹Ø°Ù‘Ø± Ø¹Ø±Ø¶ Ø§Ù„Ù…ÙˆØ§Ø¯ Ø§Ù„Ø¯Ø±Ø§Ø³ÙŠØ©. Ø£Ø¹Ø¯ ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØµÙØ­Ø© Ù„Ù„Ù…Ø­Ø§ÙˆÙ„Ø© Ù…Ø¬Ø¯Ø¯Ø§Ù‹.";
+  loadMessage.textContent = "تعذّر عرض المواد الدراسية. أعد تحميل الصفحة للمحاولة مجدداً.";
   console.error(error);
 }
