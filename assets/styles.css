@@ -435,6 +435,20 @@ details[open] > .disclosure-summary > .disclosure-chevron { transform: rotate(18
 }
 
 .action-link:hover { background: #e7b859; }
+
+.pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.view-link {
+  color: var(--gold-ink);
+  background: var(--white);
+}
+
+.view-link:hover { background: var(--gold-pale); }
+
 .resource-status { color: var(--muted); font-size: .92rem; }
 .empty-message { padding: .75rem .9rem; color: var(--muted); }
 .load-message { color: var(--muted); text-align: center; }
