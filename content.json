@@ -8,11 +8,17 @@
           "number": 1,
           "title": "الفصل الأول",
           "lectures": [
-            {
-              "number": 1,
-              "title": "المحاضرة الأولى",
-              "pdf": "files/computer-assembly/chapter-01/lecture-01.pdf"
-            }
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/computer-assembly/chapter-01/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/computer-assembly/chapter-01/lecture-02.pdf"}
+          ]
+        },
+        {
+          "number": 2,
+          "title": "الفصل الثاني",
+          "lectures": [
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/computer-assembly/chapter-02/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/computer-assembly/chapter-02/lecture-02.pdf"},
+            {"number": 3, "title": "المحاضرة الثالثة", "pdf": "files/computer-assembly/chapter-02/lecture-03.pdf"}
           ]
         }
       ],
@@ -33,11 +39,16 @@
           "number": 1,
           "title": "الفصل الأول",
           "lectures": [
-            {
-              "number": 1,
-              "title": "المحاضرة الأولى",
-              "pdf": "files/communications-networks/chapter-01/lecture-01.pdf"
-            }
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/communications-networks/chapter-01/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/communications-networks/chapter-01/lecture-02.pdf"}
+          ]
+        },
+        {
+          "number": 2,
+          "title": "الفصل الثاني",
+          "lectures": [
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/communications-networks/chapter-02/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/communications-networks/chapter-02/lecture-02.pdf"}
           ]
         }
       ],
@@ -58,11 +69,9 @@
           "number": 1,
           "title": "الفصل الأول",
           "lectures": [
-            {
-              "number": 1,
-              "title": "المحاضرة الأولى",
-              "pdf": "files/computer-applications/chapter-01/lecture-01.pdf"
-            }
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/computer-applications/chapter-01/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/computer-applications/chapter-01/lecture-02.pdf"},
+            {"number": 3, "title": "المحاضرة الثالثة", "pdf": "files/computer-applications/chapter-01/lecture-03.pdf"}
           ]
         }
       ],
@@ -83,42 +92,18 @@
           "number": 1,
           "title": "الفصل الأول",
           "lectures": [
-            {
-              "number": 1,
-              "title": "المحاضرة الأولى",
-              "pdf": "files/computer-fundamentals/chapter-01/lecture-01.pdf"
-            },
-            {
-              "number": 2,
-              "title": "المحاضرة الثانية",
-              "pdf": "files/computer-fundamentals/chapter-01/lecture-02.pdf"
-            },
-            {
-              "number": 3,
-              "title": "المحاضرة الثالثة",
-              "pdf": "files/computer-fundamentals/chapter-01/lecture-03.pdf"
-            },
-            {
-              "number": 4,
-              "title": "المحاضرة الرابعة",
-              "pdf": "files/computer-fundamentals/chapter-01/lecture-04.pdf"
-            },
-            {
-              "number": 5,
-              "title": "المحاضرة الخامسة",
-              "pdf": "files/computer-fundamentals/chapter-01/lecture-05.pdf"
-            }
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/computer-fundamentals/chapter-01/lecture-01.pdf"},
+            {"number": 2, "title": "المحاضرة الثانية", "pdf": "files/computer-fundamentals/chapter-01/lecture-02.pdf"},
+            {"number": 3, "title": "المحاضرة الثالثة", "pdf": "files/computer-fundamentals/chapter-01/lecture-03.pdf"},
+            {"number": 4, "title": "المحاضرة الرابعة", "pdf": "files/computer-fundamentals/chapter-01/lecture-04.pdf"},
+            {"number": 5, "title": "المحاضرة الخامسة", "pdf": "files/computer-fundamentals/chapter-01/lecture-05.pdf"}
           ]
         },
         {
           "number": 2,
           "title": "الفصل الثاني",
           "lectures": [
-            {
-              "number": 1,
-              "title": "المحاضرة الأولى",
-              "pdf": "files/computer-fundamentals/chapter-02/lecture-01.pdf"
-            }
+            {"number": 1, "title": "المحاضرة الأولى", "pdf": "files/computer-fundamentals/chapter-02/lecture-01.pdf"}
           ]
         }
       ],
