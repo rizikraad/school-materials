@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar-IQ" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a294c">
+  <meta name="description" content="المحاضرات والملفات الدراسية لإعدادية الفرابي المهنية الأهلية">
+  <title>المحاضرات والملفات الدراسية | إعدادية الفرابي المهنية الأهلية</title>
+  <link rel="icon" href="./assets/school-logo.webp" type="image/webp">
+  <link rel="preload" href="./assets/fonts/cairo-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <div class="identity">
+        <span class="logo-frame">
+          <img class="school-logo" src="./assets/school-logo.webp" width="68" height="68" alt="شعار المدرسة">
+        </span>
+        <div>
+          <p class="school-name">إعدادية الفرابي المهنية الأهلية</p>
+          <p class="school-subtitle">المحاضرات والملفات الدراسية</p>
+        </div>
+      </div>
+      <a class="overview-link" href="#subjects">
+        <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+          <path d="M8 7h8M8 11h6"/>
+        </svg>
+        المواد الدراسية
+      </a>
+    </div>
+  </header>
+
+  <main class="shell" id="main">
+    <section class="intro" aria-labelledby="subjects">
+      <div class="intro-copy">
+        <h1 id="subjects" tabindex="-1">المواد الدراسية</h1>
+        <p>اختر المادة لعرض المحاضرات والتقييم.</p>
+      </div>
+    </section>
+
+    <div id="subject-list" class="subject-list"></div>
+    <p class="load-message" id="load-message" role="status">جارٍ تحميل المواد الدراسية…</p>
+    <noscript><p class="load-message">فعّل JavaScript في المتصفح لعرض المواد الدراسية.</p></noscript>
+    <section id="subject-detail" class="subject-detail" aria-labelledby="course-title" hidden></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>إعدادية الفرابي المهنية الأهلية</span>
+      <span class="footer-teacher">المدرس رزق رعد</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "subjects": [
+    {
+      "id": "computer-assembly",
+      "title": "تجميع الحاسوب",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "الفصل الأول",
+          "lectures": [
+            {
+              "number": 1,
+              "title": "المحاضرة الأولى",
+              "pdf": "files/computer-assembly/chapter-01/lecture-01.pdf"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": "files/computer-assembly/month-01-exam/questions.pdf",
+        "answers": "files/computer-assembly/month-01-exam/answers.pdf"
+      },
+      "grades": {
+        "monthOne": null,
+        "chapterOne": null
+      }
+    },
+    {
+      "id": "communications-networks",
+      "title": "مبادئ الاتصالات والشبكات",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "الفصل الأول",
+          "lectures": [
+            {
+              "number": 1,
+              "title": "المحاضرة الأولى",
+              "pdf": "files/communications-networks/chapter-01/lecture-01.pdf"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": "files/communications-networks/month-01-exam/questions.pdf",
+        "answers": "files/communications-networks/month-01-exam/answers.pdf"
+      },
+      "grades": {
+        "monthOne": null,
+        "chapterOne": null
+      }
+    },
+    {
+      "id": "computer-applications",
+      "title": "تطبيقات الحاسوب",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "الفصل الأول",
+          "lectures": [
+            {
+              "number": 1,
+              "title": "المحاضرة الأولى",
+              "pdf": "files/computer-applications/chapter-01/lecture-01.pdf"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": "files/computer-applications/month-01-exam/questions.pdf",
+        "answers": "files/computer-applications/month-01-exam/answers.pdf"
+      },
+      "grades": {
+        "monthOne": null,
+        "chapterOne": null
+      }
+    },
+    {
+      "id": "computer-fundamentals",
+      "title": "مبادئ الحاسوب الأساسية",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "الفصل الأول",
+          "lectures": [
+            {
+              "number": 1,
+              "title": "المحاضرة الأولى",
+              "pdf": "files/computer-fundamentals/chapter-01/lecture-01.pdf"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": "files/computer-fundamentals/month-01-exam/questions.pdf",
+        "answers": "files/computer-fundamentals/month-01-exam/answers.pdf"
+      },
+      "grades": {
+        "monthOne": null,
+        "chapterOne": null
+      }
+    }
+  ]
+}
